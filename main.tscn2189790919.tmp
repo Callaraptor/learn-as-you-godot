@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://c6u17flb7yqes"]
+
+[ext_resource type="Texture2D" uid="uid://b56fw8fuul4se" path="res://Sprites/Player.png" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://dy48pregbydt4" path="res://Sprites/Coin.png" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://bfyciw7g6eoum" path="res://coin.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://cgbur0cmrjcvg" path="res://2d-platformer-template/Template/Scenes/Levels/Demo_level/demo_level_2.tscn" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://d3u2c1qkehr5k" path="res://2d-platformer-template/Template/Scenes/Levels/Demo_level/demo_level_1.tscn" id="6_7mycd"]
+
+[node name="Main" type="Node2D" unique_id=630068510]
+
+[node name="Control" type="Control" parent="." unique_id=224453923]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Player" type="Sprite2D" parent="." unique_id=1014516510]
+position = Vector2(49, -281)
+scale = Vector2(1, 1.0706522)
+texture = ExtResource("1_ig7tw")
+
+[node name="Player4" type="Sprite2D" parent="." unique_id=1949224308]
+position = Vector2(204, -312.00003)
+scale = Vector2(-2.775844, 0.4762821)
+texture = ExtResource("1_ig7tw")
+
+[node name="Player2" type="Sprite2D" parent="." unique_id=1188263035]
+position = Vector2(-70, -313.00003)
+scale = Vector2(2.0178378, 1.8118641)
+texture = ExtResource("1_ig7tw")
+
+[node name="Player3" type="Sprite2D" parent="." unique_id=395201818]
+position = Vector2(464.00003, -303.00003)
+scale = Vector2(1.9990499, 1.1318641)
+texture = ExtResource("1_ig7tw")
+
+[node name="Coin" parent="." unique_id=497953134 instance=ExtResource("2_h2yge")]
+visible = false
+position = Vector2(93, -34)
+
+[node name="Coin2" type="Sprite2D" parent="." unique_id=1315785664]
+visible = false
+position = Vector2(178, -35)
+texture = ExtResource("2_0xm2m")
+
+[node name="Coin3" type="Sprite2D" parent="." unique_id=1415784930]
+visible = false
+position = Vector2(263, -33)
+texture = ExtResource("2_0xm2m")
+
+[node name="Coin4" parent="." unique_id=1714832597 instance=ExtResource("2_h2yge")]
+visible = false
+modulate = Color(0.7294118, 1, 1, 1)
+position = Vector2(-101, -37)
+
+[node name="Box" type="Node2D" parent="." unique_id=1609380031]
+position = Vector2(570, -260)
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1132846540]
+
+[node name="Demo_level_1" parent="Node2D" unique_id=1790660466 instance=ExtResource("6_7mycd")]
+
+[node name="Node2D2" type="Node2D" parent="." unique_id=968924970]
+position = Vector2(56, 583)
+
+[node name="Demo_level_2" parent="Node2D2" unique_id=755535501 instance=ExtResource("5_lquwl")]
